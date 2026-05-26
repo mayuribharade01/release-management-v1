@@ -1,9 +1,10 @@
-# My Project - Version 1.0
+# My Project - Version 1.0.1 (Hotfix)
 
 def login(username, password):
-    if username and password:
-        return "Login successful"
-    return "Login failed"
+    # Hotfix: handle empty password crash
+    if not username or not password:
+        return "Error: Username and password required"
+    return "Login successful"
 
 def dashboard():
     return "Dashboard loaded"
